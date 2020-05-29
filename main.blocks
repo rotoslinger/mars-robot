@@ -1,0 +1,140 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="ItkP1yM|$;xRzzA*^Sdz">Player</variable><variable type="KIND_SpriteKind" id="5U|4]aF5EXYcu~8/G*f`">Projectile</variable><variable type="KIND_SpriteKind" id="{N;u92Qn6SF/4Iz@oH_r">Food</variable><variable type="KIND_SpriteKind" id="zDHe$g]$.1MfIxJFCd+Q">Enemy</variable><variable id="`tvKGA4w-.cx9C,zpgF^">mySprite</variable><variable id="*aWcJ+?w1M@m^;-qTTwx">resource_tiles</variable><variable id="hkhDps+q#V@LA;+=$l]/">location</variable><variable id="k*JHY+%}9V/QS]=*O:Bg">direction</variable><variable id="5xhcm~WY`T+fjpE52Uxw">list</variable><variable id="e2EM|q}??!}?).$C`VBR">resource_drops</variable><variable id="mX64?D^+{KdLY+#38C#G">value</variable><variable id="Fvm^qr!JvXgDDa-ufuUd">location_Wall</variable><variable id="~Q$Id8[Jj[o`2?NK1g}P">index</variable><variable type="BLOCKLY_TILESET_TYPE" id="}-UBm.bB*ik$8+^URh6o">0;16;16;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</variable><variable type="BLOCKLY_TILESET_TYPE" id="9iU?NeGI-Qu=~(e_%@iG">1;16;16;9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999</variable><variable type="BLOCKLY_TILESET_TYPE" id="#~}9WgAv4ly]-5(rabMR">2;16;16;2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222</variable><variable type="BLOCKLY_TILESET_TYPE" id="HZ6[OsHpA[{q/162ooWe">3;16;16;eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</variable></variables><comment x="562" y="94" h="200" w="200">ice-0
+rock-1
+algae-2</comment><block type="pxt-on-start" x="0" y="0"><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="`tvKGA4w-.cx9C,zpgF^">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . e e e e . . . . . 
+. . . e e e e e e e e . . . 
+. . . . f f 2 2 f f . . . . 
+. . . . f 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 f . . . . 
+. b b b f f 2 2 f f b b b . 
+. b . . e e e e e e . . b . 
+b b b . e e e e e e . b b b 
+b . b . b b b b b b . b . b 
+. . . . b b b b b b . . . . 
+. . . . b b b b b b . . . . 
+. . . . f f . . f f . . . . 
+. . . . f f . . f f . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="gamesetbackgroundcolor"><value name="color"><shadow type="colorindexpicker"><field name="index">4</field></shadow></value><next><block type="tilemap_editor"><field name="tilemap">tiles.createTilemap(
+            hex`1e001e00020202020202020202000000000000000000000000000000000000000000030202030203020202000000000000000000000000000000000000000000020202020202020202000000000000000000000000000000000000000000020203020202020200000300000000000000000000000000000000000000020202020202000000000000000200000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000300030000000000000000000000000000000000000000000000000000000303030300000000000000000000000000000000000000000000000000000003030303000000000000000000000000000000000000000000000000000003030300000000000000000000000300000000000003000000000000000000000000000000000000030000030100000000000300000000000000000000000000000000000000000000030300000000030000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000003000000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010301010300000000000000000000000000000001010000000000000000030101010300000000000000000000000000000101030300000000000000030102010300000000000000000000000000000302030300000000000000030101010300000000000000000000000000000102030200000000000000030102030300000000000000000000000000000000000000000000000000000000000000000003030203000000000000000000000000000000000000000000000000000003010202000000000000000000000000000000000000000000000000000001010302000000000000000000000000000000000000000000000000000003020202000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+2 2 2 2 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 . . 2 . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 . . . . . . . 2 . . . . . . 2 . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . 2 . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . 2 . 2 . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . 2 2 2 2 . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . 2 2 2 2 . . . 
+. . . . . . . . . . . . . . . . . . . . . . . 2 2 2 . . . . 
+. . . . . . . 2 . . . . . . 2 . . . . . . . . . . . . . . . 
+. . . 2 . . 2 2 . . . . . 2 . . . . . . . . . . . . . . . . 
+. . . . . . 2 2 . . . . 2 . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . 2 . . . . . . . . . . . . . . . . . 
+. . . . . . . . 2 . . . . 2 . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . 2 2 2 2 2 . . . . . . . . . . . . . . . 2 2 . . . . . 
+. . . 2 2 2 2 2 . . . . . . . . . . . . . . 2 2 2 2 . . . . 
+. . . 2 2 2 2 2 . . . . . . . . . . . . . . 2 2 2 2 . . . . 
+. . . 2 2 2 2 2 . . . . . . . . . . . . . . 2 2 2 2 . . . . 
+. . . 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . 2 2 2 2 . . . . . . . . . . . . . . . 
+. . . . . . . . . . . 2 2 2 2 . . . . . . . . . . . . . . . 
+. . . . . . . . . . . 2 2 2 2 . . . . . . . . . . . . . . . 
+. . . . . . . . . . . 2 2 2 2 . 2 . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . 2 . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+`,
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3],
+            TileScale.Sixteen
+        )</field><next><block type="camerafollow"><value name="sprite"><block type="variables_get"><field name="VAR" id="`tvKGA4w-.cx9C,zpgF^">mySprite</field></block></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get"><field name="VAR" id="`tvKGA4w-.cx9C,zpgF^">mySprite</field></block></value><next><block type="mapplaceonrandomtile"><value name="sprite"><block type="variables_get"><field name="VAR" id="`tvKGA4w-.cx9C,zpgF^">mySprite</field></block></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">myTiles.tile0</field></shadow></value><next><block type="variables_set"><field name="VAR" id="*aWcJ+?w1M@m^;-qTTwx">resource_tiles</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="lists_create_with"><mutation items="3"/><value name="ADD0"><block type="tileset_tile_picker"><field name="tile">myTiles.tile1</field></block></value><value name="ADD1"><block type="tileset_tile_picker"><field name="tile">myTiles.tile2</field></block></value><value name="ADD2"><block type="tileset_tile_picker"><field name="tile">myTiles.tile3</field></block></value></block></value><next><block type="variables_set"><field name="VAR" id="e2EM|q}??!}?).$C`VBR">resource_drops</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="lists_create_with"><mutation items="3"/><value name="ADD0"><block type="screen_image_picker"><field name="img">img`
+. . . . . . . 9 . . . . . . . . 
+. . . . . . 9 9 9 . . . . . . . 
+. . . . . 9 9 9 9 9 . . . . . . 
+. . . . 9 9 9 9 9 9 9 . . . . . 
+. . . 9 9 9 9 9 9 9 9 9 . . . . 
+. . 9 9 9 9 9 9 9 9 9 9 9 . . . 
+. 9 9 9 9 9 9 9 9 9 9 9 9 9 . . 
+. 9 9 9 9 9 9 9 9 9 9 9 9 9 . . 
+. 9 9 9 9 9 9 9 9 9 9 9 9 9 . . 
+. 9 9 9 9 9 9 9 9 9 9 9 9 9 . . 
+. 9 9 9 9 9 9 9 9 9 9 9 9 9 . . 
+. . 9 9 9 9 9 9 9 9 9 9 9 . . . 
+. . . 9 9 9 9 9 9 9 9 9 . . . . 
+. . . . 9 9 9 9 9 9 9 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></block></value><value name="ADD1"><block type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . 2 2 2 . . . . . 
+. . . 2 2 . . . 2 2 2 . 2 2 2 . 
+. . . 2 2 . . . 2 2 2 . 2 2 2 . 
+. . . 2 2 . 2 2 2 . . . 2 2 2 . 
+. . . . . . 2 2 2 . . . . . . . 
+. . . . . . 2 2 2 . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . 2 2 . . . 2 2 2 2 2 2 . . . 
+. . 2 2 . . . 2 2 2 2 2 2 . . . 
+. . 2 2 . . . 2 2 2 2 2 2 . . . 
+. . 2 2 . . . 2 2 2 2 2 2 . . . 
+. . . . . . . . . . . . . . . . 
+. . . . 2 2 2 2 2 2 . . . . . . 
+. . . . 2 2 2 2 2 2 . . . . . . 
+. . . . 2 2 2 2 2 2 . . . . . . 
+`</field></block></value><value name="ADD2"><block type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. 7 . . . . . . . . . e . 7 . . 
+. . . . e . 7 . . . . . . . . . 
+. . e . . . . . 7 7 . . . . . . 
+. . . . . . . e . . . . . . . . 
+. . . . e . . . . . . . . . . . 
+. . . . . . . . . 7 . e . . e e 
+. . e . 7 . . . . . . . . 7 . . 
+. . . . . . . . . . e . . 7 . . 
+. . . . e . . . . 7 . . . . . . 
+. . . . . e . . . . . . . . . . 
+. . . . . . 7 . . . . . . . . . 
+. . . 7 . . . . e . . . . . . . 
+. . . 7 . 7 . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></block></value></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="forever" x="2870" y="230"><statement name="HANDLER"><block type="controls_if"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="tilemap_getLoadedMap"/></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="create_overworld_map"><field name="tilemap">tiles.createTilemap(
+            hex`1e001e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+`,
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3],
+            TileScale.Sixteen
+        )</field></block></value></block></value></block></statement></block><block type="function_definition" x="960" y="450"><mutation name="break_in_direction" functionid="Xnps`k;y2ZlM{4FF~/=="><arg name="direction" id="G~BCf]lNNHT2.J9euB[q" type="number"/></mutation><field name="function_name">break_in_direction</field><value name="G~BCf]lNNHT2.J9euB[q"><shadow type="argument_reporter_number"><field name="VALUE">direction</field></shadow></value><statement name="STACK"><block type="variables_set"><field name="VAR" id="Fvm^qr!JvXgDDa-ufuUd">location_Wall</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="tilemap_locationInDirection"><value name="direction"><shadow type="direction_editor"><field name="direction">CollisionDirection.Left</field></shadow><block type="argument_reporter_number"><field name="VALUE">direction</field></block></value><value name="location"><block type="tilemap_locationOfSprite"><value name="s"><block type="variables_get"><field name="VAR" id="`tvKGA4w-.cx9C,zpgF^">mySprite</field></block></value></block></value></block></value><next><block type="controls_if"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="tilemap_tileIsWall"><value name="location"><shadow type="mapgettile"><value name="col"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="row"><shadow type="math_number"><field name="NUM">0</field></shadow></value></shadow><block type="variables_get"><field name="VAR" id="Fvm^qr!JvXgDDa-ufuUd">location_Wall</field></block></value></block></value><statement name="DO0"><block type="pxt_controls_for"><value name="VAR"><shadow type="variables_get_reporter"><field name="VAR" id="~Q$Id8[Jj[o`2?NK1g}P">index</field></shadow></value><value name="TO"><shadow type="math_whole_number"><field name="NUM">4</field></shadow></value><statement name="DO"><block type="controls_if"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow></value></block></statement><next><block type="mapsettileat"><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">myTiles.tile0</field></shadow></value><value name="loc"><shadow type="mapgettile"><value name="col"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="row"><shadow type="math_number"><field name="NUM">0</field></shadow></value></shadow><block type="variables_get"><field name="VAR" id="Fvm^qr!JvXgDDa-ufuUd">location_Wall</field></block></value><next><block type="mapsetwallat"><value name="on"><shadow type="toggleOnOff"><field name="on">false</field></shadow></value><value name="loc"><shadow type="mapgettile"><value name="col"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="row"><shadow type="math_number"><field name="NUM">0</field></shadow></value></shadow><block type="variables_get"><field name="VAR" id="Fvm^qr!JvXgDDa-ufuUd">location_Wall</field></block></value></block></next></block></next></block></statement></block></next></block></statement></block><block type="spriteshitwall" x="110" y="530"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><statement name="HANDLER"><block type="controls_if"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="keyispressed"><field name="button">controller.A</field></block></value><statement name="DO0"><block type="pxt_controls_for_of"><value name="VAR"><shadow type="variables_get_reporter"><field name="VAR" id="k*JHY+%}9V/QS]=*O:Bg">direction</field></shadow></value><value name="LIST"><shadow type="variables_get"><field name="VAR" id="5xhcm~WY`T+fjpE52Uxw">list</field></shadow><block type="lists_create_with"><mutation items="4"/><value name="ADD0"><block type="direction_editor"><field name="direction">CollisionDirection.Top</field></block></value><value name="ADD1"><block type="direction_editor"><field name="direction">CollisionDirection.Right</field></block></value><value name="ADD2"><block type="direction_editor"><field name="direction">CollisionDirection.Bottom</field></block></value><value name="ADD3"><block type="direction_editor"><field name="direction">CollisionDirection.Left</field></block></value></block></value><statement name="DO"><block type="function_call"><mutation name="break_in_direction" functionid="Xnps`k;y2ZlM{4FF~/=="><arg name="direction" id="G~BCf]lNNHT2.J9euB[q" type="number"/></mutation><value name="G~BCf]lNNHT2.J9euB[q"><shadow type="math_number"><field name="NUM">1</field></shadow><block type="variables_get"><field name="VAR" id="k*JHY+%}9V/QS]=*O:Bg">direction</field></block></value></block></statement></block></statement></block></statement></block><block type="variables_get" disabled="true" x="1381" y="583"><field name="VAR" id="k*JHY+%}9V/QS]=*O:Bg">direction</field></block><block type="tilemap_locationInDirection" disabled="true" x="1610" y="670"><value name="direction"><shadow type="direction_editor"><field name="direction">CollisionDirection.Left</field></shadow><block type="variables_get"><field name="VAR" id="k*JHY+%}9V/QS]=*O:Bg">direction</field></block></value><value name="location"><block type="tilemap_locationOfSprite"><value name="s"><block type="variables_get"><field name="VAR" id="`tvKGA4w-.cx9C,zpgF^">mySprite</field></block></value></block></value></block><block type="tilemap_locationInDirection" disabled="true" x="1570" y="950"><value name="direction"><shadow type="direction_editor"><field name="direction">CollisionDirection.Left</field></shadow><block type="variables_get"><field name="VAR" id="k*JHY+%}9V/QS]=*O:Bg">direction</field></block></value><value name="location"><block type="tilemap_locationOfSprite"><value name="s"><block type="variables_get"><field name="VAR" id="`tvKGA4w-.cx9C,zpgF^">mySprite</field></block></value></block></value></block></xml>
